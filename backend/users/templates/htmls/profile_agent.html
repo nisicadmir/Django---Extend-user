@@ -1,0 +1,44 @@
+{% extends "basee.html" %}
+
+{% block title %}My profile{% endblock %}
+
+{% block stylesheet %}
+  {% include "partials/_stylesheet.html" %}
+{% endblock %}
+
+{% block css %}
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block nav %}
+  {% include "partials/_nav.html" %}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="wrapper row align-items-center">
+    <div class="col-6 push-3">
+      
+      {% if user.is_authenticated %}
+        Hello agent: {{user.username}}
+      {% endif %}
+    </div>
+  </div>
+</div>
+  
+{% endblock %}
+
+{% block footer %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
+
+{% block script %}
+  {% include "partials/_script.html" %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

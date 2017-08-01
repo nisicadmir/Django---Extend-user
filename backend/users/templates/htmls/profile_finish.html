@@ -1,0 +1,47 @@
+{% extends "basee.html" %}
+
+{% block title %}Finish your profile{% endblock %}
+
+{% block stylesheet %}
+  {% include "partials/_stylesheet.html" %}
+{% endblock %}
+
+{% block css %}
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block nav %}
+  {% include "partials/_nav.html" %}
+{% endblock %}
+
+
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container-fluid">
+  <div class="wrapper row align-items-center">
+    <div class="col-6 push-3">
+      <form method="post" action="{% url 'finish-profile' %}">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Submit" class="btn btn-primary" />
+      </form>
+    </div>
+  </div>
+</div>
+  
+{% endblock %}
+
+{% block footer %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
+
+{% block script %}
+  {% include "partials/_script.html" %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

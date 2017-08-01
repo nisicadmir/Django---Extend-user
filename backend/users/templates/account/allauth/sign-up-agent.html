@@ -1,0 +1,45 @@
+{% extends "basee.html" %}
+
+{% block title %}Index page{% endblock %}
+
+{% block stylesheet %}
+  {% include "partials/_stylesheet.html" %}
+{% endblock %}
+
+{% block css %}
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container-fluid">
+  <div class="wrapper row align-items-center">
+    <div class="col-6 push-3">
+      <h3>Welcome, please register as an agent</h3>
+      <form method="post" action="{% url 'sign-up-agent' %}">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Submit" class="btn btn-primary" />
+            <p>Already have account? - <span><a href="{% url 'account_login' %}">Login here</a></span></p>
+      </form>
+    </div>
+  </div>
+</div>
+  
+{% endblock %}
+
+{% block footer %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
+
+{% block script %}
+  {% include "partials/_script.html" %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

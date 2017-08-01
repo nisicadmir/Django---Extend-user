@@ -1,0 +1,39 @@
+{% extends "basee.html" %}
+
+{% block title %}Index page{% endblock %}
+
+{% block stylesheet %}
+  {% include "partials/_stylesheet.html" %}
+{% endblock %}
+
+{% block css %}
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block nav %}
+  {% include "partials/_nav.html" %}
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="wrapper row align-items-center">
+      <div class="col text-center">
+        <h1>Welcome to our page</h1>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
+
+{% block script %}
+  {% include "partials/_script.html" %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
