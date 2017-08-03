@@ -4,10 +4,10 @@ This is an example app of extending Django User with AbstractUser. AbstractUser 
 
 ## Installing backend (works with python2.7)
 ```
-git clone https://admirn@bitbucket.org/admirn/django-extend-user.git
+git clone https://github.com/nisicadmir/Django---Extend-user.git
 ```
 ```
-cd django-extend-user
+cd Django---Extend-user
 ```
 ```
 virtualenv env
