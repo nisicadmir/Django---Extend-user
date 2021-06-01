@@ -8,4 +8,4 @@ oauthlib==2.0.2
 python-openid==2.2.5
 requests==2.18.2
 requests-oauthlib==0.8.0
-urllib3==1.22
+urllib3==1.26.5
